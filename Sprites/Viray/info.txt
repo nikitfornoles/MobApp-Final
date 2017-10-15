@@ -1,0 +1,13 @@
+attack (holy punch) - DONE
+walk - 
+dash - 
+block - DONE
+jump, up, down - DONE
+duck - DONE
+forward attack (upper cut) - 
+jump attack (jump kick) - 
+duck attack (self heal + area damage + knockback) - DONE
+duck forward attack (fireball) - DONE
+duck back attack (kick set) - 
+idle (standing and duck) - DONE
+special (holy cross) - 

@@ -1,0 +1,16 @@
+attack (fire slash) - DONE
+walk (float walk) - DONE
+dash (chromatic dash) - DONE
+block - DONE
+jump, up, down (just reuse the DUCK animation but make it that the character goes up and falls down) - DONE
+duck (turn into flames) - DONE
+duck to stand - DONE
+forward attack (heavier cut) - DONE
+jump attack (fireball) [just her throw fireball projectiles] - DONE
+duck attack (ground fire) [use the FIREBALL DASH animation but make it stationary. add the floor projectile] - DONE
+duck forward attack (fireball dash - like a normal dash but has damage when it hits enemies) - DONE
+duck back attack (fireball dodge) [JUST MIRROR THE ONE ABOVE then add the fireball projectile going forward] - DONE
+idle (standing and duck) - DONE
+special (flame spirits = enemies that touch the fireballs are damaged) - DONE
+
+sorry Trix. nawaran na kaya akong gana magpara animate. plus kaipuhan nindo na makua ini asap so yeah.

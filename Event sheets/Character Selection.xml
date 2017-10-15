@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Character Selection</name>
+    <events>
+        <variable constant="0" name="Character" sid="341675804611958" static="0" type="number">0</variable>
+        <event-block sid="457828353506528">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="540249432887991" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Cat2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="458849795538926" type="System">
+                    <param id="0" name="Variable">Character</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="799733295750390" type="Cat2">
+                    <param id="0" name="Opacity">60</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="223187618103516" type="Sprite4">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="943408964789385" type="Viray2">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="463070486823519" type="Sprite9">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="190977837045428" type="Sprite8">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="897036717847433">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="911634489607603" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Sprite4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="800654697030587" type="System">
+                    <param id="0" name="Variable">Character</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="439200685342301" type="Sprite4">
+                    <param id="0" name="Opacity">60</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="521163585967878" type="Cat2">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="460539002618593" type="Viray2">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="558204110016412" type="Sprite9">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="979489880975013" type="Sprite8">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="769255294021185">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="232528407134918" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Viray2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="266277542926502" type="System">
+                    <param id="0" name="Variable">Character</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="612317009067011" type="Viray2">
+                    <param id="0" name="Opacity">60</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="522215839513112" type="Cat2">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="777046675693546" type="Sprite4">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="841874272661336" type="Sprite9">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="909788718048203" type="Sprite8">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="467074202696672">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="215585180547196" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Sprite8</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="842190281620692" type="System">
+                    <param id="0" name="Variable">Character</param>
+                    <param id="1" name="Value">4</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="659780452010906" type="Sprite8">
+                    <param id="0" name="Opacity">60</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="613624324351300" type="Cat2">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="857091681815301" type="Viray2">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="993302025893842" type="Sprite9">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="849301474746542" type="Sprite4">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="234204682536236">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="870014564712313" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Sprite9</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="972187079055639" type="System">
+                    <param id="0" name="Variable">Character</param>
+                    <param id="1" name="Value">5</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="816746886472560" type="Sprite9">
+                    <param id="0" name="Opacity">60</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="264176986031862" type="Cat2">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="796069360613931" type="Viray2">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="701523190924771" type="Sprite4">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="482017732124867" type="Sprite8">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="223962995500193">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="254033262985363" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Play</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="346733664753919" type="System">
+                    <param id="0" name="Layout">Game</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

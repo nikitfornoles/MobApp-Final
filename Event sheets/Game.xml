@@ -1,0 +1,519 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Game</name>
+    <events>
+        <variable comment="0=True 1= False" constant="0" name="SpecialCD" sid="530289487562551" static="0" type="number">0</variable>
+        <event-block sid="617441266667681">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="634107796018532" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="805479282863748" type="viray_special_projectile" />
+            </actions>
+        </event-block>
+        <event-block sid="713594665682510">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="250954292761488" type="Keyboard">
+                    <param id="0" name="Key">65 (A)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="235579986621260" type="Viray">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="640316429581894">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="942159183525906" type="Keyboard">
+                    <param id="0" name="Key">68 (D)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="661805656297885" type="Viray">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="400377404497670">
+            <conditions>
+                <condition id="2" name="Key is down" sid="578201978978356" type="Keyboard">
+                    <param id="0" name="Key">65 (A)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="910470740903703" type="Viray">
+                    <param id="0" name="Control">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="519714960236198">
+            <conditions>
+                <condition id="2" name="Key is down" sid="534846763470284" type="Keyboard">
+                    <param id="0" name="Key">68 (D)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="829933351640103" type="Viray">
+                    <param id="0" name="Control">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="265162829384044">
+            <conditions>
+                <condition id="2" name="Key is down" sid="952839156717861" type="Keyboard">
+                    <param id="0" name="Key">87 (W)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="537599832044344" type="Viray">
+                    <param id="0" name="Control">2</param>
+                </action>
+                <action id="4" name="Set animation" sid="310605464367456" type="Viray">
+                    <param id="0" name="Animation">&quot;JumpUp&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="413135145346993">
+            <conditions>
+                <condition behavior="Platform" id="0" name="Is moving" sid="495932911780487" type="Viray" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="207410084743948" type="Viray">
+                    <param id="0" name="Animation">&quot;Walking&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="601421924195638">
+            <conditions>
+                <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="622147997660076" type="Viray" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="686555866157605" type="Viray">
+                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="327910772803634">
+            <conditions>
+                <condition behavior="Platform" id="4" name="Is falling" sid="971446528344055" type="Viray" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="414053106805945" type="Viray">
+                    <param id="0" name="Animation">&quot;JumpDown&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="404227489936312">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="385196114687492" type="Keyboard">
+                    <param id="0" name="Key">73 (I)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="570039052911040" type="Viray">
+                    <param id="0" name="Object">viray_special_projectile</param>
+                    <param id="1" name="Layer">&quot;Characters&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="535509148075667" type="Viray">
+                    <param id="0" name="Animation">&quot;Attack&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="301939566049910">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="972542013692318" type="Keyboard">
+                    <param id="0" name="Key">65 (A)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="245219845417455" type="Cat">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="348807140724119">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="135950945553924" type="Keyboard">
+                    <param id="0" name="Key">68 (D)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="323355174808483" type="Cat">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="331076712592169">
+            <conditions>
+                <condition id="2" name="Key is down" sid="470176634512598" type="Keyboard">
+                    <param id="0" name="Key">65 (A)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="575819816195776" type="Cat">
+                    <param id="0" name="Control">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="698140909084032">
+            <conditions>
+                <condition id="2" name="Key is down" sid="662645742745639" type="Keyboard">
+                    <param id="0" name="Key">68 (D)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="721975565543122" type="Cat">
+                    <param id="0" name="Control">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="724421584536136">
+            <conditions>
+                <condition id="2" name="Key is down" sid="182278324114810" type="Keyboard">
+                    <param id="0" name="Key">87 (W)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="259876795234231" type="Cat">
+                    <param id="0" name="Control">2</param>
+                </action>
+                <action id="4" name="Set animation" sid="672458586440581" type="Cat">
+                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="968632015240219">
+            <conditions>
+                <condition behavior="Platform" id="0" name="Is moving" sid="789466842048661" type="Viray" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="270234951779875" type="Cat">
+                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="833107925730601">
+            <conditions>
+                <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="331549426787946" type="Viray" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="462121152547292" type="Cat">
+                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="847624628712199">
+            <conditions>
+                <condition id="2" name="Key is down" sid="547904218421433" type="Keyboard">
+                    <param id="0" name="Key">73 (I)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="389661149349056" type="Cat">
+                    <param id="0" name="Animation">&quot;Attack&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="342994153207317">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="164471393895289" type="Keyboard">
+                    <param id="0" name="Key">65 (A)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="682094569107428" type="Sprite11">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="174189378246328">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="179059596031591" type="Keyboard">
+                    <param id="0" name="Key">68 (D)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="909061381306519" type="Sprite11">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="834068481952371">
+            <conditions>
+                <condition id="2" name="Key is down" sid="763711385648028" type="Keyboard">
+                    <param id="0" name="Key">65 (A)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="157419717368587" type="Sprite11">
+                    <param id="0" name="Control">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="451708668134184">
+            <conditions>
+                <condition id="2" name="Key is down" sid="936450330512535" type="Keyboard">
+                    <param id="0" name="Key">68 (D)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="281580806439511" type="Sprite11">
+                    <param id="0" name="Control">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="165965537833290">
+            <conditions>
+                <condition id="2" name="Key is down" sid="294488947321494" type="Keyboard">
+                    <param id="0" name="Key">87 (W)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="770901881025963" type="Sprite11">
+                    <param id="0" name="Control">2</param>
+                </action>
+                <action id="4" name="Set animation" sid="631206508273744" type="Sprite11">
+                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="908782597821196">
+            <conditions>
+                <condition behavior="Platform" id="0" name="Is moving" sid="145375917010405" type="Viray" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="412266138853329" type="Sprite11">
+                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="699274173793601">
+            <conditions>
+                <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="176612335540347" type="Viray" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="409514668983899" type="Sprite11">
+                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="638764101504230">
+            <conditions>
+                <condition id="2" name="Key is down" sid="168268648124109" type="Keyboard">
+                    <param id="0" name="Key">73 (I)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="380421698286685" type="Sprite11">
+                    <param id="0" name="Animation">&quot;Attack&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="197561982079673">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="828252817221356" type="Keyboard">
+                    <param id="0" name="Key">65 (A)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="842689901033468" type="Sprite12">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="556632980295861">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="445736750532236" type="Keyboard">
+                    <param id="0" name="Key">68 (D)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="979360834749125" type="Sprite12">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="787219500882081">
+            <conditions>
+                <condition id="2" name="Key is down" sid="102956249910858" type="Keyboard">
+                    <param id="0" name="Key">65 (A)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="557413497903437" type="Sprite12">
+                    <param id="0" name="Control">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="322296074391265">
+            <conditions>
+                <condition id="2" name="Key is down" sid="671420812749225" type="Keyboard">
+                    <param id="0" name="Key">68 (D)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="601670979306112" type="Sprite12">
+                    <param id="0" name="Control">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="707834526363673">
+            <conditions>
+                <condition id="2" name="Key is down" sid="399493500799223" type="Keyboard">
+                    <param id="0" name="Key">87 (W)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="931957905024336" type="Sprite12">
+                    <param id="0" name="Control">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="981008291964312">
+            <conditions>
+                <condition behavior="Platform" id="0" name="Is moving" sid="586278382109964" type="Viray" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="430529929159832" type="Sprite12">
+                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="123461607714193">
+            <conditions>
+                <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="580803299043026" type="Viray" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="386999499103726" type="Sprite12">
+                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="236770997805160">
+            <conditions>
+                <condition id="2" name="Key is down" sid="795957630690385" type="Keyboard">
+                    <param id="0" name="Key">73 (I)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="598350934629675" type="Sprite12">
+                    <param id="0" name="Animation">&quot;Attack&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="742781557691705">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="561838935551715" type="Keyboard">
+                    <param id="0" name="Key">65 (A)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="830976573168630" type="Sprite13">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="521911902228629">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="289617522525260" type="Keyboard">
+                    <param id="0" name="Key">68 (D)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="826363383481685" type="Sprite13">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="133839348386769">
+            <conditions>
+                <condition id="2" name="Key is down" sid="495592750302612" type="Keyboard">
+                    <param id="0" name="Key">65 (A)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="821613688602018" type="Sprite13">
+                    <param id="0" name="Control">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="539602463314235">
+            <conditions>
+                <condition id="2" name="Key is down" sid="916475869640572" type="Keyboard">
+                    <param id="0" name="Key">68 (D)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="125423767277467" type="Sprite13">
+                    <param id="0" name="Control">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="502699322510878">
+            <conditions>
+                <condition id="2" name="Key is down" sid="921373826582444" type="Keyboard">
+                    <param id="0" name="Key">87 (W)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="762357534318239" type="Sprite13">
+                    <param id="0" name="Control">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="227864617551285">
+            <conditions>
+                <condition behavior="Platform" id="0" name="Is moving" sid="305891998508568" type="Viray" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="401404665477854" type="Sprite13">
+                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="275868597338537">
+            <conditions>
+                <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="151806724101200" type="Viray" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="907148435319337" type="Sprite13">
+                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="202379738831026">
+            <conditions>
+                <condition id="2" name="Key is down" sid="183569829996185" type="Keyboard">
+                    <param id="0" name="Key">73 (I)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="380830539284877" type="Sprite13">
+                    <param id="0" name="Animation">&quot;Attack&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
