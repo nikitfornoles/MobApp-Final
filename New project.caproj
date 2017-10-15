@@ -770,9 +770,9 @@
     </object-folder>
     <families />
     <layout-folder>
+        <layout>Selection.xml</layout>
         <layout>Game.xml</layout>
         <layout>Title.xml</layout>
-        <layout>Selection.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Game.xml</event-sheet>
