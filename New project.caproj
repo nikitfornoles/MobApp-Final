@@ -955,9 +955,9 @@
     </families>
     <layout-folder>
         <layout>Title.xml</layout>
+        <layout>Login.xml</layout>
         <layout>Selection.xml</layout>
         <layout>Game.xml</layout>
-        <layout>Login.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>EventSheet_Game.xml</event-sheet>

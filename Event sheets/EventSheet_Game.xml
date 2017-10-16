@@ -134,12 +134,12 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Platform2" id="7" name="Simulate control" sid="537599832044344" type="Characters">
-                            <param id="0" name="Control">2</param>
-                        </action>
                         <action id="4" name="Set animation" sid="310605464367456" type="Characters">
                             <param id="0" name="Animation">&quot;Jump&quot;</param>
                             <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Platform2" id="7" name="Simulate control" sid="537599832044344" type="Characters">
+                            <param id="0" name="Control">2</param>
                         </action>
                     </actions>
                     <sub-events>
