@@ -158,7 +158,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Viray" sid="802573791459912">
+        <object-type name="Character3" sid="802573791459912">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="BoundToLayout" sid="799946680254467">
@@ -310,7 +310,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Cat" sid="187956306126847">
+        <object-type name="Character2" sid="187956306126847">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Platform" sid="301760309968319">
@@ -631,7 +631,7 @@
         <object-type name="Mouse" sid="994091997513885">
             <plugin id="Mouse" />
         </object-type>
-        <object-type name="Sprite11" sid="680969209698881">
+        <object-type name="Character1" sid="680969209698881">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Platform" sid="858881512203785">
@@ -674,7 +674,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite12" sid="143671840018782">
+        <object-type name="Character4" sid="143671840018782">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Platform" sid="341263341740529">
@@ -711,7 +711,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite13" sid="417221098368315">
+        <object-type name="Character0" sid="417221098368315">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Platform" sid="286431664387240">
@@ -888,8 +888,35 @@
         <object-type name="TextBox" sid="653155155740924">
             <plugin id="TextBox" />
         </object-type>
+        <object-type name="CharacterID" sid="931644644813906">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="initial_pos" sid="811709480458621">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="521871076573045" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
-    <families />
+    <families>
+        <family name="Characters" plugin-id="Sprite" sid="624787333541705">
+            <members>
+                <member>Character0</member>
+                <member>Character1</member>
+                <member>Character2</member>
+                <member>Character3</member>
+                <member>Character4</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="maxHP" sid="862891191815365" type="number" />
+                <instance-variable name="curHP" sid="836772073327938" type="number" />
+                <instance-variable name="name" sid="836108674990775" type="string" />
+                <instance-variable name="id" sid="963218639648244" type="number" />
+            </instance-variables>
+        </family>
+    </families>
     <layout-folder>
         <layout>Title.xml</layout>
         <layout>Selection.xml</layout>

@@ -10,7 +10,42 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="805479282863748" type="viray_special_projectile" />
+                <action id="0" name="Set text" sid="731600308184970" type="CharacterID">
+                    <param id="0" name="Text">CharacterID</param>
+                </action>
             </actions>
+            <sub-events>
+                <event-block sid="334431985365449">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="298321893593753" type="Characters">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">CharacterID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="346067959483408" type="Characters">
+                            <param id="0" name="Object">initial_pos</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="240696616822371">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="762656145320463" type="System">
+                            <param id="0" name="Object">Characters</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="304904105138950" type="Characters">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">CharacterID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="729925938067134" type="Characters" />
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="713594665682510">
             <conditions>
@@ -19,7 +54,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="7" name="Set mirrored" sid="235579986621260" type="Viray">
+                <action id="7" name="Set mirrored" sid="235579986621260" type="Character3">
                     <param id="0" name="State">0</param>
                 </action>
             </actions>
@@ -31,7 +66,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="7" name="Set mirrored" sid="661805656297885" type="Viray">
+                <action id="7" name="Set mirrored" sid="661805656297885" type="Character3">
                     <param id="0" name="State">1</param>
                 </action>
             </actions>
@@ -43,7 +78,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="910470740903703" type="Viray">
+                <action behavior="Platform" id="7" name="Simulate control" sid="910470740903703" type="Character3">
                     <param id="0" name="Control">0</param>
                 </action>
             </actions>
@@ -55,7 +90,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="829933351640103" type="Viray">
+                <action behavior="Platform" id="7" name="Simulate control" sid="829933351640103" type="Character3">
                     <param id="0" name="Control">1</param>
                 </action>
             </actions>
@@ -67,10 +102,10 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="537599832044344" type="Viray">
+                <action behavior="Platform" id="7" name="Simulate control" sid="537599832044344" type="Character3">
                     <param id="0" name="Control">2</param>
                 </action>
-                <action id="4" name="Set animation" sid="310605464367456" type="Viray">
+                <action id="4" name="Set animation" sid="310605464367456" type="Character3">
                     <param id="0" name="Animation">&quot;JumpUp&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
@@ -78,10 +113,10 @@
         </event-block>
         <event-block sid="413135145346993">
             <conditions>
-                <condition behavior="Platform" id="0" name="Is moving" sid="495932911780487" type="Viray" />
+                <condition behavior="Platform" id="0" name="Is moving" sid="495932911780487" type="Character3" />
             </conditions>
             <actions>
-                <action id="4" name="Set animation" sid="207410084743948" type="Viray">
+                <action id="4" name="Set animation" sid="207410084743948" type="Character3">
                     <param id="0" name="Animation">&quot;Walking&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
@@ -89,10 +124,10 @@
         </event-block>
         <event-block sid="601421924195638">
             <conditions>
-                <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="622147997660076" type="Viray" />
+                <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="622147997660076" type="Character3" />
             </conditions>
             <actions>
-                <action id="4" name="Set animation" sid="686555866157605" type="Viray">
+                <action id="4" name="Set animation" sid="686555866157605" type="Character3">
                     <param id="0" name="Animation">&quot;Idle&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
@@ -100,10 +135,10 @@
         </event-block>
         <event-block sid="327910772803634">
             <conditions>
-                <condition behavior="Platform" id="4" name="Is falling" sid="971446528344055" type="Viray" />
+                <condition behavior="Platform" id="4" name="Is falling" sid="971446528344055" type="Character3" />
             </conditions>
             <actions>
-                <action id="4" name="Set animation" sid="414053106805945" type="Viray">
+                <action id="4" name="Set animation" sid="414053106805945" type="Character3">
                     <param id="0" name="Animation">&quot;JumpDown&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
@@ -116,12 +151,12 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Spawn another object" sid="570039052911040" type="Viray">
+                <action id="0" name="Spawn another object" sid="570039052911040" type="Character3">
                     <param id="0" name="Object">viray_special_projectile</param>
                     <param id="1" name="Layer">&quot;Characters&quot;</param>
                     <param id="2" name="Image point">1</param>
                 </action>
-                <action id="4" name="Set animation" sid="535509148075667" type="Viray">
+                <action id="4" name="Set animation" sid="535509148075667" type="Character3">
                     <param id="0" name="Animation">&quot;Attack&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
@@ -134,7 +169,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="7" name="Set mirrored" sid="245219845417455" type="Cat">
+                <action id="7" name="Set mirrored" sid="245219845417455" type="Character2">
                     <param id="0" name="State">0</param>
                 </action>
             </actions>
@@ -146,7 +181,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="7" name="Set mirrored" sid="323355174808483" type="Cat">
+                <action id="7" name="Set mirrored" sid="323355174808483" type="Character2">
                     <param id="0" name="State">1</param>
                 </action>
             </actions>
@@ -158,7 +193,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="575819816195776" type="Cat">
+                <action behavior="Platform" id="7" name="Simulate control" sid="575819816195776" type="Character2">
                     <param id="0" name="Control">0</param>
                 </action>
             </actions>
@@ -170,7 +205,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="721975565543122" type="Cat">
+                <action behavior="Platform" id="7" name="Simulate control" sid="721975565543122" type="Character2">
                     <param id="0" name="Control">1</param>
                 </action>
             </actions>
@@ -182,10 +217,10 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="259876795234231" type="Cat">
+                <action behavior="Platform" id="7" name="Simulate control" sid="259876795234231" type="Character2">
                     <param id="0" name="Control">2</param>
                 </action>
-                <action id="4" name="Set animation" sid="672458586440581" type="Cat">
+                <action id="4" name="Set animation" sid="672458586440581" type="Character2">
                     <param id="0" name="Animation">&quot;Jump&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
@@ -193,10 +228,10 @@
         </event-block>
         <event-block sid="968632015240219">
             <conditions>
-                <condition behavior="Platform" id="0" name="Is moving" sid="789466842048661" type="Viray" />
+                <condition behavior="Platform" id="0" name="Is moving" sid="789466842048661" type="Character3" />
             </conditions>
             <actions>
-                <action id="4" name="Set animation" sid="270234951779875" type="Cat">
+                <action id="4" name="Set animation" sid="270234951779875" type="Character2">
                     <param id="0" name="Animation">&quot;Walk&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
@@ -204,10 +239,10 @@
         </event-block>
         <event-block sid="833107925730601">
             <conditions>
-                <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="331549426787946" type="Viray" />
+                <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="331549426787946" type="Character3" />
             </conditions>
             <actions>
-                <action id="4" name="Set animation" sid="462121152547292" type="Cat">
+                <action id="4" name="Set animation" sid="462121152547292" type="Character2">
                     <param id="0" name="Animation">&quot;Idle&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
@@ -220,7 +255,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="4" name="Set animation" sid="389661149349056" type="Cat">
+                <action id="4" name="Set animation" sid="389661149349056" type="Character2">
                     <param id="0" name="Animation">&quot;Attack&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
@@ -233,7 +268,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="7" name="Set mirrored" sid="682094569107428" type="Sprite11">
+                <action id="7" name="Set mirrored" sid="682094569107428" type="Character1">
                     <param id="0" name="State">0</param>
                 </action>
             </actions>
@@ -245,7 +280,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="7" name="Set mirrored" sid="909061381306519" type="Sprite11">
+                <action id="7" name="Set mirrored" sid="909061381306519" type="Character1">
                     <param id="0" name="State">1</param>
                 </action>
             </actions>
@@ -257,7 +292,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="157419717368587" type="Sprite11">
+                <action behavior="Platform" id="7" name="Simulate control" sid="157419717368587" type="Character1">
                     <param id="0" name="Control">0</param>
                 </action>
             </actions>
@@ -269,7 +304,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="281580806439511" type="Sprite11">
+                <action behavior="Platform" id="7" name="Simulate control" sid="281580806439511" type="Character1">
                     <param id="0" name="Control">1</param>
                 </action>
             </actions>
@@ -281,10 +316,10 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="770901881025963" type="Sprite11">
+                <action behavior="Platform" id="7" name="Simulate control" sid="770901881025963" type="Character1">
                     <param id="0" name="Control">2</param>
                 </action>
-                <action id="4" name="Set animation" sid="631206508273744" type="Sprite11">
+                <action id="4" name="Set animation" sid="631206508273744" type="Character1">
                     <param id="0" name="Animation">&quot;Jump&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
@@ -292,10 +327,10 @@
         </event-block>
         <event-block sid="908782597821196">
             <conditions>
-                <condition behavior="Platform" id="0" name="Is moving" sid="145375917010405" type="Viray" />
+                <condition behavior="Platform" id="0" name="Is moving" sid="145375917010405" type="Character3" />
             </conditions>
             <actions>
-                <action id="4" name="Set animation" sid="412266138853329" type="Sprite11">
+                <action id="4" name="Set animation" sid="412266138853329" type="Character1">
                     <param id="0" name="Animation">&quot;Walk&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
@@ -303,10 +338,10 @@
         </event-block>
         <event-block sid="699274173793601">
             <conditions>
-                <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="176612335540347" type="Viray" />
+                <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="176612335540347" type="Character3" />
             </conditions>
             <actions>
-                <action id="4" name="Set animation" sid="409514668983899" type="Sprite11">
+                <action id="4" name="Set animation" sid="409514668983899" type="Character1">
                     <param id="0" name="Animation">&quot;Idle&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
@@ -319,7 +354,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="4" name="Set animation" sid="380421698286685" type="Sprite11">
+                <action id="4" name="Set animation" sid="380421698286685" type="Character1">
                     <param id="0" name="Animation">&quot;Attack&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
@@ -332,7 +367,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="7" name="Set mirrored" sid="842689901033468" type="Sprite12">
+                <action id="7" name="Set mirrored" sid="842689901033468" type="Character4">
                     <param id="0" name="State">0</param>
                 </action>
             </actions>
@@ -344,7 +379,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="7" name="Set mirrored" sid="979360834749125" type="Sprite12">
+                <action id="7" name="Set mirrored" sid="979360834749125" type="Character4">
                     <param id="0" name="State">1</param>
                 </action>
             </actions>
@@ -356,7 +391,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="557413497903437" type="Sprite12">
+                <action behavior="Platform" id="7" name="Simulate control" sid="557413497903437" type="Character4">
                     <param id="0" name="Control">0</param>
                 </action>
             </actions>
@@ -368,7 +403,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="601670979306112" type="Sprite12">
+                <action behavior="Platform" id="7" name="Simulate control" sid="601670979306112" type="Character4">
                     <param id="0" name="Control">1</param>
                 </action>
             </actions>
@@ -380,17 +415,17 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="931957905024336" type="Sprite12">
+                <action behavior="Platform" id="7" name="Simulate control" sid="931957905024336" type="Character4">
                     <param id="0" name="Control">2</param>
                 </action>
             </actions>
         </event-block>
         <event-block sid="981008291964312">
             <conditions>
-                <condition behavior="Platform" id="0" name="Is moving" sid="586278382109964" type="Viray" />
+                <condition behavior="Platform" id="0" name="Is moving" sid="586278382109964" type="Character3" />
             </conditions>
             <actions>
-                <action id="4" name="Set animation" sid="430529929159832" type="Sprite12">
+                <action id="4" name="Set animation" sid="430529929159832" type="Character4">
                     <param id="0" name="Animation">&quot;Walk&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
@@ -398,10 +433,10 @@
         </event-block>
         <event-block sid="123461607714193">
             <conditions>
-                <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="580803299043026" type="Viray" />
+                <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="580803299043026" type="Character3" />
             </conditions>
             <actions>
-                <action id="4" name="Set animation" sid="386999499103726" type="Sprite12">
+                <action id="4" name="Set animation" sid="386999499103726" type="Character4">
                     <param id="0" name="Animation">&quot;Idle&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
@@ -414,7 +449,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="4" name="Set animation" sid="598350934629675" type="Sprite12">
+                <action id="4" name="Set animation" sid="598350934629675" type="Character4">
                     <param id="0" name="Animation">&quot;Attack&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
@@ -427,7 +462,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="7" name="Set mirrored" sid="830976573168630" type="Sprite13">
+                <action id="7" name="Set mirrored" sid="830976573168630" type="Character0">
                     <param id="0" name="State">0</param>
                 </action>
             </actions>
@@ -439,7 +474,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="7" name="Set mirrored" sid="826363383481685" type="Sprite13">
+                <action id="7" name="Set mirrored" sid="826363383481685" type="Character0">
                     <param id="0" name="State">1</param>
                 </action>
             </actions>
@@ -451,7 +486,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="821613688602018" type="Sprite13">
+                <action behavior="Platform" id="7" name="Simulate control" sid="821613688602018" type="Character0">
                     <param id="0" name="Control">0</param>
                 </action>
             </actions>
@@ -463,7 +498,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="125423767277467" type="Sprite13">
+                <action behavior="Platform" id="7" name="Simulate control" sid="125423767277467" type="Character0">
                     <param id="0" name="Control">1</param>
                 </action>
             </actions>
@@ -475,17 +510,17 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="762357534318239" type="Sprite13">
+                <action behavior="Platform" id="7" name="Simulate control" sid="762357534318239" type="Character0">
                     <param id="0" name="Control">2</param>
                 </action>
             </actions>
         </event-block>
         <event-block sid="227864617551285">
             <conditions>
-                <condition behavior="Platform" id="0" name="Is moving" sid="305891998508568" type="Viray" />
+                <condition behavior="Platform" id="0" name="Is moving" sid="305891998508568" type="Character3" />
             </conditions>
             <actions>
-                <action id="4" name="Set animation" sid="401404665477854" type="Sprite13">
+                <action id="4" name="Set animation" sid="401404665477854" type="Character0">
                     <param id="0" name="Animation">&quot;Walk&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
@@ -493,10 +528,10 @@
         </event-block>
         <event-block sid="275868597338537">
             <conditions>
-                <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="151806724101200" type="Viray" />
+                <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="151806724101200" type="Character3" />
             </conditions>
             <actions>
-                <action id="4" name="Set animation" sid="907148435319337" type="Sprite13">
+                <action id="4" name="Set animation" sid="907148435319337" type="Character0">
                     <param id="0" name="Animation">&quot;Idle&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
@@ -509,7 +544,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="4" name="Set animation" sid="380830539284877" type="Sprite13">
+                <action id="4" name="Set animation" sid="380830539284877" type="Character0">
                     <param id="0" name="Animation">&quot;Attack&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>

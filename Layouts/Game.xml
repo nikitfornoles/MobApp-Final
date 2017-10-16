@@ -133,13 +133,19 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Viray" uid="2">
+                <instance type="Character3" uid="2">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <maxHP>100</maxHP>
+                        <curHP>100</curHP>
+                        <name></name>
+                        <id>3</id>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="BoundToLayout">
                             <properties>
@@ -164,8 +170,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-201</x>
-                        <y>646</y>
+                        <x>1711</x>
+                        <y>264</y>
                         <z>0</z>
                         <width>130.531005859</width>
                         <height>185.399993896</height>
@@ -176,13 +182,19 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Cat" uid="5">
+                <instance type="Character2" uid="5">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <maxHP>100</maxHP>
+                        <curHP>100</curHP>
+                        <name></name>
+                        <id>2</id>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
                             <properties>
@@ -202,8 +214,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-201</x>
-                        <y>366</y>
+                        <x>-131</x>
+                        <y>595</y>
                         <z>0</z>
                         <width>146.797821045</width>
                         <height>177.678161621</height>
@@ -236,13 +248,19 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite11" uid="20">
+                <instance type="Character1" uid="20">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <maxHP>100</maxHP>
+                        <curHP>100</curHP>
+                        <name></name>
+                        <id>1</id>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
                             <properties>
@@ -262,8 +280,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-194</x>
-                        <y>85</y>
+                        <x>-136</x>
+                        <y>347</y>
                         <z>0</z>
                         <width>130.531005859</width>
                         <height>185.399993896</height>
@@ -274,13 +292,19 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite12" uid="8">
+                <instance type="Character4" uid="8">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <maxHP>100</maxHP>
+                        <curHP>100</curHP>
+                        <name></name>
+                        <id>4</id>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
                             <properties>
@@ -300,8 +324,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1710</x>
-                        <y>301</y>
+                        <x>1723</x>
+                        <y>545</y>
                         <z>0</z>
                         <width>130.531005859</width>
                         <height>185.399993896</height>
@@ -312,13 +336,19 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite13" uid="21">
+                <instance type="Character0" uid="21">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <maxHP>100</maxHP>
+                        <curHP>100</curHP>
+                        <name></name>
+                        <id>0</id>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
                             <properties>
@@ -338,14 +368,63 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1702</x>
-                        <y>567</y>
+                        <x>-133</x>
+                        <y>87</y>
                         <z>0</z>
                         <width>130.531005859</width>
                         <height>185.399993896</height>
                         <depth>0</depth>
                         <hotspotX>0.408088237</hotspotX>
                         <hotspotY>0.444649458</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="CharacterID" uid="19">
+                    <properties>
+                        <text>Text</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-16</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>653</x>
+                        <y>543</y>
+                        <z>0</z>
+                        <width>200</width>
+                        <height>30</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="initial_pos" uid="36">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>675</x>
+                        <y>687</y>
+                        <z>0</z>
+                        <width>250</width>
+                        <height>37</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
