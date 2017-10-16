@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EventSheet_Login</name>
+    <events>
+        <variable constant="0" name="myUserID" sid="835467724835953" static="0" type="number">0</variable>
+        <comment>The alias to pass to the next layout.</comment>
+        <variable comment="Name entered on login screen" constant="0" name="MyUsername" sid="857850131827537" static="0" type="text"></variable>
+        <event-block sid="467791115224389">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="339091716289844" type="System" />
+            </conditions>
+            <actions>
+                <action id="6" name="Set focused" sid="618921030281093" type="NameTextBox" />
+                <action id="7" name="Set CSS style" sid="643003837420402" type="NameTextBox">
+                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                    <param id="1" name="Value">2.5&amp;&quot;vh&quot;</param>
+                </action>
+                <action id="5" name="Set CSS style" sid="671050074900785" type="JoinButton">
+                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                    <param id="1" name="Value">2.5&amp;&quot;vh&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <comment>If multiplayer is not supported by this browser, indicate this on the login screen.</comment>
+                <event-block sid="667406611778014">
+                    <conditions>
+                        <condition id="12" inverted="1" name="Supports multiplayer" sid="904787020028786" type="Multiplayer" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="544142087056673" type="Title">
+                            <param id="0" name="Text">&quot;Multiplayer not supported&quot;</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="420909827829813" type="Title">
+                            <param id="0" name="Color">rgb(255, 0, 0)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Make the &apos;Join&apos; button disabled if the entered name is empty, so the user cannot try to join without first entering a name.</comment>
+        <event-block sid="994023525217192">
+            <conditions>
+                <condition id="1" name="On text changed" sid="601626694028580" type="NameTextBox" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="543834915678114">
+                    <conditions>
+                        <condition id="0" name="Compare text" sid="414370322868167" type="NameTextBox">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set enabled" sid="571340033845697" type="JoinButton">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="982663527616463">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="340849156379122" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set enabled" sid="928827558417768" type="JoinButton">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>When clicking &apos;Join&apos; or pressing enter with a non-empty name, store the entered name in the global variable and go to the Game layout which will then try to connect.</comment>
+        <event-block any="1" sid="244088686101002">
+            <conditions>
+                <condition id="0" name="On clicked" sid="732330528424209" type="JoinButton" />
+                <condition id="0" name="On key pressed" sid="626496360915489" type="Keyboard">
+                    <param id="0" name="Key">13 (Return)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="384148816066701">
+                    <conditions>
+                        <condition id="0" inverted="1" name="Compare text" sid="885913294284371" type="NameTextBox">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                        <condition id="12" name="Supports multiplayer" sid="863960031101720" type="Multiplayer" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="957908658497183" type="System">
+                            <param id="0" name="Variable">MyUsername</param>
+                            <param id="1" name="Value">NameTextBox.Text</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="304871482875049" type="System">
+                            <param id="0" name="Layout">Selection</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="771694689219329" type="System">
+                            <param id="0" name="Variable">myUserID</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

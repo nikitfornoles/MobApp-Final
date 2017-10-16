@@ -2,7 +2,7 @@
 <c2layout>
     <name>Title</name>
     <sid>748922876826012</sid>
-    <event-sheet>Title</event-sheet>
+    <event-sheet>EventSheet_Title</event-sheet>
     <size>
         <width>1366</width>
         <height>768</height>

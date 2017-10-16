@@ -12,11 +12,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <open-tabs>
         <layout order="1">Selection</layout>
         <layout order="2">Game</layout>
-        <layout active="1" order="0">Title</layout>
-        <event-sheet order="3">Title</event-sheet>
-        <event-sheet order="4">Game</event-sheet>
-        <event-sheet order="5">Sheet_Login</event-sheet>
-        <event-sheet order="6">Character Selection</event-sheet>
+        <layout order="0">Title</layout>
+        <event-sheet active="1" order="3">EventSheet_Title</event-sheet>
+        <event-sheet order="4">EventSheet_Game</event-sheet>
+        <event-sheet order="5">EventSheet_Login</event-sheet>
+        <event-sheet order="6">EventSheet_CharacterSelection</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -29,14 +29,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </families-expanded>
     <folders-expanded>
         <folder expanded="0" path="object-folder/" />
-        <folder expanded="0" path="layout-folder/" />
+        <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="file-folder/" />
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
         <folder expanded="1" path="animation-folder/stignaciuspark/" />
-        <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/sprite_solidFloor/" />
         <folder expanded="1" path="animation-folder/viray_special_projectile/" />
         <folder expanded="1" path="animation-folder/Character3/" />
         <folder expanded="1" path="animation-folder/Character2/" />

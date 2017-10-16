@@ -2,7 +2,7 @@
 <c2layout>
     <name>Selection</name>
     <sid>828205683219509</sid>
-    <event-sheet>Character Selection</event-sheet>
+    <event-sheet>EventSheet_CharacterSelection</event-sheet>
     <size>
         <width>1600</width>
         <height>960</height>

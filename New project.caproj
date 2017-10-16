@@ -60,7 +60,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite" sid="293965466244554">
+        <object-type name="sprite_solidFloor" sid="293965466244554">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Solid" sid="479763047972557">
@@ -164,92 +164,16 @@
                 <behavior-type name="BoundToLayout" sid="799946680254467">
                     <behavior id="bound" />
                 </behavior-type>
-                <behavior-type name="Platform" sid="316501301780057">
-                    <behavior id="Platform" />
-                </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="10" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="466258689089879" speed="10">
+                <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="159924239264815" speed="10">
                     <frame duration="1" hotspotX="0.454819" hotspotY="0.490942">
                         <image-point name="Imagepoint 1" x="1.09036" y="0.242754" />
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
-                    </frame>
                 </animation>
-                <animation framecount="10" loop="0" name="JumpUp" pingpong="0" repeatcount="1" repeatto="0" sid="142154482173095" speed="15">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
-                    </frame>
-                </animation>
-                <animation framecount="4" loop="1" name="Walking" pingpong="0" repeatcount="1" repeatto="0" sid="132532539913441" speed="10">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
-                    </frame>
-                </animation>
-                <animation framecount="10" loop="0" name="JumpDown" pingpong="0" repeatcount="1" repeatto="0" sid="403981282444172" speed="15">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
+                <animation framecount="10" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="466258689089879" speed="10">
+                    <frame duration="1" hotspotX="0.454819" hotspotY="0.490942">
+                        <image-point name="Imagepoint 1" x="1.09036" y="0.242754" />
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
@@ -308,15 +232,88 @@
                         <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
                     </frame>
                 </animation>
+                <animation framecount="4" loop="1" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="132532539913441" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
+                    </frame>
+                </animation>
+                <animation framecount="10" loop="0" name="Jump" pingpong="0" repeatcount="1" repeatto="0" sid="142154482173095" speed="15">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
+                    </frame>
+                </animation>
+                <animation framecount="10" loop="0" name="JumpDown" pingpong="0" repeatcount="1" repeatto="0" sid="403981282444172" speed="15">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.829687" y="0.285937" />
+                    </frame>
+                </animation>
             </animation-folder>
         </object-type>
         <object-type name="Character2" sid="187956306126847">
             <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Platform" sid="301760309968319">
-                    <behavior id="Platform" />
-                </behavior-type>
-            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="522413702353922" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Cafer\Desktop\Mobile App\cat\idle1.png">
@@ -331,19 +328,19 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="2" loop="0" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="142794243065701" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-                <animation framecount="2" loop="0" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="512372747510850" speed="5">
+                <animation framecount="2" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="512372747510850" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Cafer\Desktop\Mobile App\cat\idle1.png" />
                     <frame duration="1" hotspotX="0.501333" hotspotY="0.5" original-source="C:\Users\Cafer\Desktop\Mobile App\cat\idle24.png" />
                 </animation>
-                <animation framecount="1" loop="0" name="Jump" pingpong="0" repeatcount="1" repeatto="0" sid="268569830078740" speed="5">
-                    <frame duration="1" hotspotX="0.501408" hotspotY="0.500805" original-source="C:\Users\Cafer\Desktop\Mobile App\cat\jump.png" />
-                </animation>
                 <animation framecount="1" loop="0" name="Attack" pingpong="0" repeatcount="1" repeatto="0" sid="280656426356932" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.500904" original-source="C:\Users\Cafer\Desktop\Mobile App\cat\special kick attack.png" />
+                </animation>
+                <animation framecount="2" loop="0" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="142794243065701" speed="5">
+                    <frame duration="1" hotspotX="0.507071" hotspotY="0.157738" />
+                    <frame duration="1" hotspotX="0.507071" hotspotY="0.157738" />
+                </animation>
+                <animation framecount="1" loop="0" name="Jump" pingpong="0" repeatcount="1" repeatto="0" sid="268569830078740" speed="5">
+                    <frame duration="1" hotspotX="0.501408" hotspotY="0.500805" original-source="C:\Users\Cafer\Desktop\Mobile App\cat\jump.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -633,11 +630,6 @@
         </object-type>
         <object-type name="Character1" sid="680969209698881">
             <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Platform" sid="858881512203785">
-                    <behavior id="Platform" />
-                </behavior-type>
-            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="794673506968345" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.501075" original-source="C:\Users\Cafer\Desktop\Mobile App\neithan\idle.png">
@@ -652,13 +644,17 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="2" loop="0" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="368774090411155" speed="5">
+                <animation framecount="2" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="368774090411155" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.50108" original-source="C:\Users\Cafer\Desktop\Mobile App\neithan\idle.png" />
                     <frame duration="1" hotspotX="0.502024" hotspotY="0.5" original-source="C:\Users\Cafer\Desktop\Mobile App\neithan\idle2.png" />
                 </animation>
+                <animation framecount="2" loop="0" name="Attack" pingpong="0" repeatcount="1" repeatto="0" sid="714308095079238" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.50108" original-source="C:\Users\Cafer\Desktop\Mobile App\neithan\idle.png" />
+                    <frame duration="1" hotspotX="0.501792" hotspotY="0.501124" original-source="C:\Users\Cafer\Desktop\Mobile App\neithan\punch.png" />
+                </animation>
                 <animation framecount="2" loop="0" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="178331629426562" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502203" />
+                    <frame duration="1" hotspotX="0.296429" hotspotY="0.5" />
                 </animation>
                 <animation framecount="2" loop="0" name="Jump" pingpong="0" repeatcount="1" repeatto="0" sid="859898976235859" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.50108" original-source="C:\Users\Cafer\Desktop\Mobile App\neithan\idle.png" />
@@ -668,56 +664,91 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.50108" original-source="C:\Users\Cafer\Desktop\Mobile App\neithan\idle.png" />
                     <frame duration="1" hotspotX="0.501299" hotspotY="0.501114" original-source="C:\Users\Cafer\Desktop\Mobile App\neithan\smash attack.png" />
                 </animation>
-                <animation framecount="2" loop="0" name="Attack" pingpong="0" repeatcount="1" repeatto="0" sid="714308095079238" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.50108" original-source="C:\Users\Cafer\Desktop\Mobile App\neithan\idle.png" />
-                    <frame duration="1" hotspotX="0.501792" hotspotY="0.501124" original-source="C:\Users\Cafer\Desktop\Mobile App\neithan\punch.png" />
-                </animation>
             </animation-folder>
         </object-type>
         <object-type name="Character4" sid="143671840018782">
             <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Platform" sid="341263341740529">
-                    <behavior id="Platform" />
-                </behavior-type>
-            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="601692097892349" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Cafer\Desktop\Mobile App\Golduck Sprites\idle2.png">
                         <collision-poly>
-                            <point x="0.172911" y="0.204778" />
-                            <point x="0.5" y="0.119454" />
-                            <point x="0.642651" y="0.423208" />
-                            <point x="0.998559" y="0.5" />
-                            <point x="0.770893" y="0.728669" />
+                            <point x="0.98415" y="0.5" />
+                            <point x="0.599424" y="0.525597" />
                             <point x="0.5" y="0.964164" />
-                            <point x="0.400576" y="0.525597" />
-                            <point x="0.0158501" y="0.5" />
+                            <point x="0.229107" y="0.728669" />
+                            <point x="0.001441" y="0.5" />
+                            <point x="0.357349" y="0.423208" />
+                            <point x="0.5" y="0.119454" />
+                            <point x="0.827089" y="0.204778" />
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="2" loop="0" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="507135865211316" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Cafer\Desktop\Mobile App\Golduck Sprites\idle2.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Cafer\Desktop\Mobile App\Golduck Sprites\idle1walk2.png" />
-                </animation>
-                <animation framecount="2" loop="0" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="558286837513127" speed="5">
-                    <frame duration="1" hotspotX="0.500778" hotspotY="0.5" original-source="C:\Users\Cafer\Desktop\Mobile App\Golduck Sprites\walk1.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Cafer\Desktop\Mobile App\Golduck Sprites\walk3.png" />
+                <animation framecount="2" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="507135865211316" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Cafer\Desktop\Mobile App\Golduck Sprites\idle2.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Cafer\Desktop\Mobile App\Golduck Sprites\idle1walk2.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
                 </animation>
                 <animation framecount="3" loop="0" name="Attack" pingpong="0" repeatcount="1" repeatto="0" sid="819762343309761" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Cafer\Desktop\Mobile App\Golduck Sprites\close charged attack1.png" />
-                    <frame duration="1" hotspotX="0.500632" hotspotY="0.50101" original-source="C:\Users\Cafer\Desktop\Mobile App\Golduck Sprites\close charged attack2.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.501031" original-source="C:\Users\Cafer\Desktop\Mobile App\Golduck Sprites\close charged attack3.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Cafer\Desktop\Mobile App\Golduck Sprites\close charged attack1.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.499368" hotspotY="0.50101" original-source="C:\Users\Cafer\Desktop\Mobile App\Golduck Sprites\close charged attack2.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501031" original-source="C:\Users\Cafer\Desktop\Mobile App\Golduck Sprites\close charged attack3.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="558286837513127" speed="5">
+                    <frame duration="1" hotspotX="0.499222" hotspotY="0.5" original-source="C:\Users\Cafer\Desktop\Mobile App\Golduck Sprites\walk1.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Cafer\Desktop\Mobile App\Golduck Sprites\walk3.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
         <object-type name="Character0" sid="417221098368315">
             <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Platform" sid="286431664387240">
-                    <behavior id="Platform" />
-                </behavior-type>
-            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="373222198820736" speed="5">
                     <frame duration="1" hotspotX="0.408088" hotspotY="0.444649" original-source="C:\Users\Cafer\Desktop\Mobile App\shannah_fighter\shannah_idle.gif">
@@ -731,40 +762,40 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="4" loop="0" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="558924481541141" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                <animation framecount="4" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="558924481541141" speed="5">
+                    <frame duration="1" hotspotX="0.408088" hotspotY="0.444649" />
+                    <frame duration="1" hotspotX="0.408088" hotspotY="0.4631" />
+                    <frame duration="1" hotspotX="0.408088" hotspotY="0.48155" />
+                    <frame duration="1" hotspotX="0.408088" hotspotY="0.4631" />
                 </animation>
                 <animation framecount="6" loop="0" name="Attack" pingpong="0" repeatcount="1" repeatto="0" sid="743171723888705" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-                <animation framecount="7" loop="0" name="Duck" pingpong="0" repeatcount="1" repeatto="0" sid="384262180610119" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-                <animation framecount="4" loop="0" name="Dash" pingpong="0" repeatcount="1" repeatto="0" sid="235898395164793" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.542614" hotspotY="0.444649" />
+                    <frame duration="1" hotspotX="0.527624" hotspotY="0.491554" />
+                    <frame duration="1" hotspotX="0.531056" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.223757" hotspotY="0.491554" />
+                    <frame duration="1" hotspotX="0.395288" hotspotY="0.453008" />
+                    <frame duration="1" hotspotX="0.423664" hotspotY="0.444649" />
                 </animation>
                 <animation framecount="4" loop="0" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="428243257745007" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.483974" hotspotY="0.436594" />
+                    <frame duration="1" hotspotX="0.52924" hotspotY="0.446619" />
+                    <frame duration="1" hotspotX="0.589286" hotspotY="0.456294" />
+                    <frame duration="1" hotspotX="0.599503" hotspotY="0.446619" />
+                </animation>
+                <animation framecount="7" loop="0" name="Duck" pingpong="0" repeatcount="1" repeatto="0" sid="384262180610119" speed="5">
+                    <frame duration="1" hotspotX="0.251773" hotspotY="0.440239" />
+                    <frame duration="1" hotspotX="0.464539" hotspotY="0.410714" />
+                    <frame duration="1" hotspotX="0.440476" hotspotY="0.28022" />
+                    <frame duration="1" hotspotX="0.526042" hotspotY="0.476415" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.541322" />
+                    <frame duration="1" hotspotX="0.454955" hotspotY="0.451923" />
+                    <frame duration="1" hotspotX="0.458678" hotspotY="0.230114" />
+                </animation>
+                <animation framecount="4" loop="0" name="Dash" pingpong="0" repeatcount="1" repeatto="0" sid="235898395164793" speed="5">
+                    <frame duration="1" hotspotX="0.463592" hotspotY="0.436594" />
+                    <frame duration="1" hotspotX="0.48008" hotspotY="0.446619" />
+                    <frame duration="1" hotspotX="0.541494" hotspotY="0.456294" />
+                    <frame duration="1" hotspotX="0.594787" hotspotY="0.446619" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -915,6 +946,11 @@
                 <instance-variable name="name" sid="836108674990775" type="string" />
                 <instance-variable name="id" sid="963218639648244" type="number" />
             </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform2" sid="956234648679865">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
         </family>
     </families>
     <layout-folder>
@@ -924,10 +960,10 @@
         <layout>Login.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>Game.xml</event-sheet>
-        <event-sheet>Title.xml</event-sheet>
-        <event-sheet>Character Selection.xml</event-sheet>
-        <event-sheet>Sheet_Login.xml</event-sheet>
+        <event-sheet>EventSheet_Game.xml</event-sheet>
+        <event-sheet>EventSheet_Title.xml</event-sheet>
+        <event-sheet>EventSheet_CharacterSelection.xml</event-sheet>
+        <event-sheet>EventSheet_Login.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="3" />

@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EventSheet_Game</name>
+    <events>
+        <variable comment="0=True 1= False" constant="0" name="SpecialCD" sid="530289487562551" static="0" type="number">0</variable>
+        <event-block sid="617441266667681">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="634107796018532" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="805479282863748" type="viray_special_projectile" />
+                <action id="0" name="Set text" sid="731600308184970" type="CharacterID">
+                    <param id="0" name="Text">CharacterID</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="334431985365449">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="298321893593753" type="Characters">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">CharacterID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="346067959483408" type="Characters">
+                            <param id="0" name="Object">initial_pos</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="240696616822371">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="762656145320463" type="System">
+                            <param id="0" name="Object">Characters</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="304904105138950" type="Characters">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">CharacterID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="729925938067134" type="Characters" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="288529733116093" title="Common Actions">
+            <sub-events>
+                <event-block sid="713594665682510">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="250954292761488" type="Keyboard">
+                            <param id="0" name="Key">65 (A)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="458808738968283">
+                            <conditions>
+                                <condition id="7" inverted="1" name="Is mirrored" sid="210681834032260" type="Characters" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="664027656062114" type="Characters">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="429623105498294">
+                            <conditions />
+                            <actions>
+                                <action id="4" name="Set animation" sid="965808921185109" type="Characters">
+                                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action behavior="Platform2" id="7" name="Simulate control" sid="910470740903703" type="Characters">
+                                    <param id="0" name="Control">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="643170754157274" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="846996198205391" type="Characters">
+                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="640316429581894">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="942159183525906" type="Keyboard">
+                            <param id="0" name="Key">68 (D)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="649931246804710">
+                            <conditions>
+                                <condition id="7" name="Is mirrored" sid="401683118873190" type="Characters" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="684178633604982" type="Characters">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="652120867136472">
+                            <conditions />
+                            <actions>
+                                <action id="4" name="Set animation" sid="202470074731140" type="Characters">
+                                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action behavior="Platform2" id="7" name="Simulate control" sid="829933351640103" type="Characters">
+                                    <param id="0" name="Control">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="843194580398718" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="112328987764555" type="Characters">
+                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="265162829384044">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="952839156717861" type="Keyboard">
+                            <param id="0" name="Key">87 (W)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform2" id="7" name="Simulate control" sid="537599832044344" type="Characters">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="310605464367456" type="Characters">
+                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="762116840321576">
+                            <conditions />
+                            <actions>
+                                <action id="-16" name="Wait" sid="414513116261752" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="110820013690962" type="Characters">
+                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="404227489936312">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="385196114687492" type="Keyboard">
+                            <param id="0" name="Key">73 (I)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="535509148075667" type="Characters">
+                            <param id="0" name="Animation">&quot;Attack&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="318810384487971">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="580063874421440" type="Characters">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="265719621229480">
+                                    <conditions>
+                                        <condition id="7" inverted="1" name="Is mirrored" sid="692328312399427" type="Characters" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="555901908632440" type="Character3">
+                                            <param id="0" name="Object">viray_special_projectile</param>
+                                            <param id="1" name="Layer">&quot;Characters&quot;</param>
+                                            <param id="2" name="Image point">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="953433655730925">
+                                    <conditions>
+                                        <condition id="7" name="Is mirrored" sid="799876055533655" type="Characters" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="609479982571546" type="Character3">
+                                            <param id="0" name="Object">viray_special_projectile</param>
+                                            <param id="1" name="Layer">&quot;Characters&quot;</param>
+                                            <param id="2" name="Image point">1</param>
+                                        </action>
+                                        <action id="-8" name="Set angle" sid="624345400507015" type="viray_special_projectile">
+                                            <param id="0" name="Angle">180</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="680079384619554">
+                            <conditions />
+                            <actions>
+                                <action id="-16" name="Wait" sid="356936565020013" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="867282959756596" type="Characters">
+                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="804265012392846">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
