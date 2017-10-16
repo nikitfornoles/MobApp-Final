@@ -1,3 +1,3 @@
 # MobApp-Final
-TO play the game go to:
+To play the game go to:
 https://nikitfornoles.github.io/MobApp-Final/

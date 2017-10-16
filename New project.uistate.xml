@@ -10,7 +10,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="0">Selection</layout>
+        <layout order="0">Selection</layout>
+        <layout order="1">Game</layout>
+        <layout active="1" order="2">Title</layout>
+        <event-sheet order="3">Character Selection</event-sheet>
+        <event-sheet order="4">Title</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -39,12 +43,19 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Sprite6/" />
         <folder expanded="1" path="animation-folder/Sprite7/" />
         <folder expanded="1" path="animation-folder/Sprite8/" />
-        <folder expanded="1" path="animation-folder/Sprite9/" />
+        <folder expanded="1" path="animation-folder/Golduck2/" />
         <folder expanded="1" path="animation-folder/Sprite10/" />
         <folder expanded="1" path="animation-folder/Cat2/" />
         <folder expanded="1" path="animation-folder/Viray2/" />
         <folder expanded="1" path="animation-folder/Sprite11/" />
         <folder expanded="1" path="animation-folder/Sprite12/" />
         <folder expanded="1" path="animation-folder/Sprite13/" />
+        <folder expanded="1" path="animation-folder/character_pickcell/" />
+        <folder expanded="1" path="animation-folder/character_options/" />
+        <folder expanded="1" path="animation-folder/TitleBackground/" />
+        <folder expanded="1" path="animation-folder/optionStart/" />
+        <folder expanded="1" path="animation-folder/optionControls/" />
+        <folder expanded="1" path="animation-folder/optionExit/" />
+        <folder expanded="1" path="animation-folder/pointer/" />
     </folders-expanded>
 </c2uistate>

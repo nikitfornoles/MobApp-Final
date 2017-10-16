@@ -421,20 +421,20 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite9" sid="813427929081570">
+        <object-type name="Golduck2" sid="813427929081570">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="658460298820020" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Cafer\Desktop\Mobile App\Golduck Sprites\idle2.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\00nikit\000school\2017-2018 (1st Sem)\ICST349 iOS Development\Group Project\Assets\char5.png">
                         <collision-poly>
-                            <point x="0.172911" y="0.204778" />
-                            <point x="0.5" y="0.119454" />
-                            <point x="0.642651" y="0.423208" />
-                            <point x="0.998559" y="0.5" />
-                            <point x="0.770893" y="0.728669" />
+                            <point x="0.98415" y="0.5" />
+                            <point x="0.599424" y="0.525597" />
                             <point x="0.5" y="0.964164" />
-                            <point x="0.400576" y="0.525597" />
-                            <point x="0.0158501" y="0.5" />
+                            <point x="0.229107" y="0.728669" />
+                            <point x="0.001441" y="0.5" />
+                            <point x="0.357349" y="0.423208" />
+                            <point x="0.5" y="0.119454" />
+                            <point x="0.827089" y="0.204778" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -627,7 +627,7 @@
         <object-type name="Mouse" sid="994091997513885">
             <plugin id="Mouse" />
         </object-type>
-        <object-type name="Play" sid="300208660738097">
+        <object-type name="txtPlay" sid="300208660738097">
             <plugin id="Text" />
         </object-type>
         <object-type name="Sprite11" sid="680969209698881">
@@ -767,12 +767,111 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="character_pickcell" sid="257725663776997">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Order" sid="876769142441193" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="719514990357885" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="character_options" sid="435567457020327">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="character_id" sid="449916471513849" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="432868797041154" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\00nikit\000school\2017-2018 (1st Sem)\ICST349 iOS Development\Group Project\Assets\char1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.50108" original-source="D:\00nikit\000school\2017-2018 (1st Sem)\ICST349 iOS Development\Group Project\Assets\char2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\00nikit\000school\2017-2018 (1st Sem)\ICST349 iOS Development\Group Project\Assets\char3.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\00nikit\000school\2017-2018 (1st Sem)\ICST349 iOS Development\Group Project\Assets\char4.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\00nikit\000school\2017-2018 (1st Sem)\ICST349 iOS Development\Group Project\Assets\char5.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="txtSelectionInfo" sid="901855710032937">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="txtTimer" sid="594838145088671">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="TitleBackground" sid="796291015455622">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="390817225721852" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\wabby\Desktop\Mobile App\TITLESCREEN.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="optionStart" sid="137235488120198">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="365501911193157" speed="5">
+                    <frame duration="1" hotspotX="0.501401" hotspotY="0.5" original-source="D:\00nikit\000school\2017-2018 (1st Sem)\ICST349 iOS Development\Group Project\Assets\start.png">
+                        <collision-poly>
+                            <point x="0.338936" y="0.0119048" />
+                            <point x="0.658263" y="0.0119048" />
+                            <point x="0.935574" y="0.690476" />
+                            <point x="0.568627" y="0.988095" />
+                            <point x="0.498599" y="0.607143" />
+                            <point x="0.428571" y="0.988095" />
+                            <point x="0.00560224" y="0.690476" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="optionControls" sid="752113258533676">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="296037779365948" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\00nikit\000school\2017-2018 (1st Sem)\ICST349 iOS Development\Group Project\Assets\controls.png">
+                        <collision-poly>
+                            <point x="0.65493" y="0.130952" />
+                            <point x="0.366197" y="0.0595238" />
+                            <point x="0.78169" y="0.988095" />
+                            <point x="0.257042" y="0.797619" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="optionExit" sid="695201202074790">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="697665183125508" speed="5">
+                    <frame duration="1" hotspotX="0.501916" hotspotY="0.5" original-source="D:\00nikit\000school\2017-2018 (1st Sem)\ICST349 iOS Development\Group Project\Assets\Exit.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="pointer" sid="840484546485821">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="505543878416685" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\wabby\Desktop\Mobile App\b1.png">
+                        <collision-poly>
+                            <point x="0.313333" y="0.313333" />
+                            <point x="0.5" y="0.193333" />
+                            <point x="0.873333" y="0.126667" />
+                            <point x="0.88" y="0.88" />
+                            <point x="0.5" y="0.813333" />
+                            <point x="0.306667" y="0.693333" />
+                            <point x="0.0666667" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
+        <layout>Title.xml</layout>
         <layout>Selection.xml</layout>
         <layout>Game.xml</layout>
-        <layout>Title.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Game.xml</event-sheet>

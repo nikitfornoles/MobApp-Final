@@ -2,5 +2,66 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Title</name>
-    <events />
+    <events>
+        <event-block sid="263494260713797">
+            <conditions>
+                <condition id="-41" name="Is between angles" sid="816978364003182" type="System">
+                    <param id="0" name="Angle">0</param>
+                    <param id="1" name="First angle">0</param>
+                    <param id="2" name="Second angle">45</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="436841894623437">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="285292645820736" type="Keyboard">
+                    <param id="0" name="Key">40 (Down arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="206434987009245" type="pointer">
+                    <param id="0" name="Y">Self.Y + 90</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="864839878538812">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="211154941537565" type="Keyboard">
+                    <param id="0" name="Key">38 (Up arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="597396153799222" type="pointer">
+                    <param id="0" name="Y">Self.Y - 90</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="372513430216737">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="786563819788256" type="pointer">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Y co-ordinate">180</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="495376146332314" type="pointer">
+                    <param id="0" name="Y">90</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="360718523147555">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="457903106096552" type="pointer">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="Y co-ordinate">90</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="475367983502983" type="pointer">
+                    <param id="0" name="Y">180</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
 </c2eventsheet>
