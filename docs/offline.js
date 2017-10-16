@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1508086308,
+	"version": 1508151745,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -18,7 +18,7 @@
 		"images/sprite2-sheet0.png",
 		"images/sprite4-sheet0.png",
 		"images/sprite8-sheet0.png",
-		"images/sprite9-sheet0.png",
+		"images/golduck2-sheet0.png",
 		"images/sprite10-sheet0.png",
 		"images/cat2-sheet0.png",
 		"images/sprite11-sheet0.png",
@@ -28,11 +28,22 @@
 		"images/sprite13-sheet0.png",
 		"images/sprite13-sheet1.png",
 		"images/sprite13-sheet2.png",
+		"images/character_select-sheet0.png",
+		"images/character_options-sheet0.png",
+		"images/titlebackground-sheet0.png",
+		"images/optionstart-sheet0.png",
+		"images/optioncontrols-sheet0.png",
+		"images/optionexit-sheet0.png",
+		"images/pointer-sheet0.png",
 		"icon-16.png",
 		"icon-32.png",
 		"icon-114.png",
 		"icon-128.png",
 		"icon-256.png",
-		"loading-logo.png"
+		"loading-logo.png",
+		"c2mp-net.js",
+		"c2mp-peer.js",
+		"c2mp.js",
+		"waker.js"
 	]
 }

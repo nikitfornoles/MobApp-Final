@@ -4,7 +4,276 @@
     <name>Character Selection</name>
     <events>
         <variable constant="0" name="Character" sid="341675804611958" static="0" type="number">0</variable>
-        <event-block sid="457828353506528">
+        <variable constant="0" name="CharacterID" sid="464857104699350" static="0" type="number">0</variable>
+        <variable constant="1" name="GAME_NAME" sid="988713031386723" static="0" type="text">scirra-gametutorial3</variable>
+        <variable constant="1" name="INSTANCE_NAME" sid="107860960299623" static="0" type="text">default</variable>
+        <variable constant="1" name="ROOM_NAME" sid="283363827821355" static="0" type="text">main</variable>
+        <event-block sid="680490933694484">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="779779277877509" type="System" />
+            </conditions>
+            <actions>
+                <action id="2" name="Stop" sid="797808952537245" type="character_options" />
+            </actions>
+        </event-block>
+        <event-group description="Manages connecting to the signalling server and joining the room." sid="624217543258595" title="Signalling">
+            <sub-events>
+                <comment>On start of layout, connect to the signalling server. We also set up which client input values the peers will be using, and sync the Peer object with its position and additional instance variables for the look position, current inputs and player stats.</comment>
+                <event-block sid="867695641522481">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="169484131992440" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="15" name="Add client input value" sid="925497590752984" type="Multiplayer">
+                            <param id="0" name="Tag">&quot;lookx&quot;</param>
+                            <param id="1" name="Precision">2</param>
+                            <param id="2" name="Interpolation">1</param>
+                        </action>
+                        <action id="15" name="Add client input value" sid="993639732271713" type="Multiplayer">
+                            <param id="0" name="Tag">&quot;looky&quot;</param>
+                            <param id="1" name="Precision">2</param>
+                            <param id="2" name="Interpolation">1</param>
+                        </action>
+                        <action id="15" name="Add client input value" sid="678162134863540" type="Multiplayer">
+                            <param id="0" name="Tag">&quot;inputs&quot;</param>
+                            <param id="1" name="Precision">3</param>
+                            <param id="2" name="Interpolation">0</param>
+                        </action>
+                        <action id="1" name="Connect" sid="311858072858290" type="Multiplayer">
+                            <param id="0" name="Server">&quot;wss://multiplayer.scirra.com&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>When connected, request to log in.</comment>
+                <event-block sid="231321537327866">
+                    <conditions>
+                        <condition id="2" name="On connected" sid="357766590612818" type="Multiplayer" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="955892509099659" type="Function">
+                            <param id="0" name="Name">&quot;AddLog&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Connected, logging in...&quot;</param>
+                        </action>
+                        <action id="4" name="Log in" sid="754475357645495" type="Multiplayer">
+                            <param id="0" name="Alias">MyUsername</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>When logged in, request to join the room.</comment>
+                <event-block sid="398558573446765">
+                    <conditions>
+                        <condition id="4" name="On logged in" sid="246468605867659" type="Multiplayer" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="547735035178529" type="Function">
+                            <param id="0" name="Name">&quot;AddLog&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Logged in with alias: &quot; &amp; Multiplayer.MyAlias &amp; &quot; (&quot; &amp; Multiplayer.MyID &amp; &quot;)&quot; &amp; newline &amp; &quot;Joining room...&quot;</param>
+                        </action>
+                        <action id="5" name="Join room" sid="805244505239203" type="Multiplayer">
+                            <param id="0" name="Game">GAME_NAME</param>
+                            <param id="1" name="Instance">INSTANCE_NAME</param>
+                            <param id="2" name="Room">ROOM_NAME</param>
+                            <param id="3" name="Max peers">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>We joined the room: activate either the Host or the Peer group. The host also has text object appear to indicate they are the host.</comment>
+                <event-block sid="941671707113809">
+                    <conditions>
+                        <condition id="5" name="On joined room" sid="167406989208075" type="Multiplayer" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>As the host, we also adopt the existing Peer object in the layout as our own player. We must set its peer ID to our own ID and tell the Multiplayer object it is associated with ourselves.</comment>
+                        <event-block sid="132959264432551">
+                            <conditions>
+                                <condition id="10" name="Is host" sid="925307537525301" type="Multiplayer" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="165491350542012" type="Function">
+                                    <param id="0" name="Name">&quot;AddLog&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Joined room as host&quot;</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="348972828583643" type="System">
+                                    <param id="0" name="Group name">&quot;Host&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="176045380292352" type="HostIndicator">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>When not the host, the Peer object already in the layout is destroyed. &apos;Sync object&apos; will create the peer for ourselves, possibly in a different location, and we&apos;ll associate it then. (See the &apos;Peer&apos; group&apos;s &apos;On object created&apos;)</comment>
+                        <event-block sid="662351445418153">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="296057425175042" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="284414505106369" type="Function">
+                                    <param id="0" name="Name">&quot;AddLog&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Joined room as peer&quot;</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="917544605885029" type="System">
+                                    <param id="0" name="Group name">&quot;Peer&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="602863891383031" type="Function">
+                                    <param id="0" name="Name">&quot;AddLog&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Attempting to establish connection to host...&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>If we leave, get disconnected or encounter an error, add it to the log.</comment>
+                <event-block sid="160500022572841">
+                    <conditions>
+                        <condition id="3" name="On disconnected" sid="887094867228225" type="Multiplayer" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="535782423790699" type="Function">
+                            <param id="0" name="Name">&quot;AddLog&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Signalling disconnected&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="139657609349505">
+                    <conditions>
+                        <condition id="1" name="On error" sid="345856954994198" type="Multiplayer" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="277205817385930" type="Function">
+                            <param id="0" name="Name">&quot;AddLog&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Signalling error: &quot; &amp; Multiplayer.ErrorMessage</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="482576177519831">
+                    <conditions>
+                        <condition id="6" name="On left room" sid="812148930832491" type="Multiplayer" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="710122146320419" type="Function">
+                            <param id="0" name="Name">&quot;AddLog&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Signalling: left room&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="621638686493454">
+                    <conditions>
+                        <condition id="14" name="On kicked" sid="349239143135661" type="Multiplayer" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="979893184483769" type="Function">
+                            <param id="0" name="Name">&quot;AddLog&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Kicked (either could not connect to host or host quit)&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Update the NetStats text object in the bottom left with details like the peer count, inbound and outbound bandwidth, host ping and PDV.</comment>
+                <event-block sid="534332284278226">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="485937262979921" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="943518954219276" type="NetStats">
+                            <param id="0" name="Text">Multiplayer.PeerCount &amp; &quot; peers connected&quot; &amp; newline &amp; Multiplayer.StatInboundCount &amp; &quot; in (&quot; &amp; (round(Multiplayer.StatInboundBandwidth/100)/10) &amp; &quot; k) / sec&quot; &amp; newline &amp; Multiplayer.StatOutboundCount &amp; &quot; out (&quot; &amp; (round(Multiplayer.StatOutboundBandwidth/100)/10) &amp; &quot; k) / sec&quot; &amp; newline &amp; &quot;Host ping &quot; &amp; round(Multiplayer.PeerLatency(Multiplayer.HostID)) &amp; &quot;, PDV &quot; &amp; round(Multiplayer.PeerPDV(Multiplayer.HostID))</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="561312175141934" title="CharacterSelection">
+            <sub-events>
+                <event-block sid="874746761537370">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="703898495326288" type="Keyboard">
+                            <param id="0" name="Key">39 (Right arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="643823469224171" type="character_select">
+                            <param id="0" name="X">Self.X + 280</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="814519870152207">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="644344836177394" type="Keyboard">
+                            <param id="0" name="Key">37 (Left arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="719475211260695" type="character_select">
+                            <param id="0" name="X">Self.X - 280</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="332490529814971">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="749315838244879" type="character_select">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">1255</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="770428747404521" type="character_select">
+                            <param id="0" name="X">135</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="956572685054718">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="312122198882340" type="character_select">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">135</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="129975587502833" type="character_select">
+                            <param id="0" name="X">1255</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="288763203660903">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="875224704344613" type="Keyboard">
+                            <param id="0" name="Key">13 (Return)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="715015405649951">
+                            <conditions>
+                                <condition id="-24" name="For Each (ordered)" sid="812155493278635" type="System">
+                                    <param id="0" name="Object">character_options</param>
+                                    <param id="1" name="Expression">character_options.character_id</param>
+                                    <param id="2" name="Order">0</param>
+                                </condition>
+                                <condition id="-1" name="Compare X" sid="366759838425134" type="character_select">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="X co-ordinate">character_options.X</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="183338082660674" type="System">
+                                    <param id="0" name="Variable">CharacterID</param>
+                                    <param id="1" name="Value">character_options.character_id</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="651427620014509" type="System">
+                                    <param id="0" name="Layout">Game</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="128667829218005">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block disabled="1" sid="457828353506528">
             <conditions>
                 <condition id="6" name="On object clicked" sid="540249432887991" type="Mouse">
                     <param id="0" name="Mouse button">0</param>
@@ -26,7 +295,7 @@
                 <action id="-16" name="Set opacity" sid="943408964789385" type="Viray2">
                     <param id="0" name="Opacity">100</param>
                 </action>
-                <action id="-16" name="Set opacity" sid="463070486823519" type="Sprite9">
+                <action id="-16" name="Set opacity" sid="463070486823519" type="Golduck2">
                     <param id="0" name="Opacity">100</param>
                 </action>
                 <action id="-16" name="Set opacity" sid="190977837045428" type="Sprite8">
@@ -34,7 +303,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="897036717847433">
+        <event-block disabled="1" sid="897036717847433">
             <conditions>
                 <condition id="6" name="On object clicked" sid="911634489607603" type="Mouse">
                     <param id="0" name="Mouse button">0</param>
@@ -56,7 +325,7 @@
                 <action id="-16" name="Set opacity" sid="460539002618593" type="Viray2">
                     <param id="0" name="Opacity">100</param>
                 </action>
-                <action id="-16" name="Set opacity" sid="558204110016412" type="Sprite9">
+                <action id="-16" name="Set opacity" sid="558204110016412" type="Golduck2">
                     <param id="0" name="Opacity">100</param>
                 </action>
                 <action id="-16" name="Set opacity" sid="979489880975013" type="Sprite8">
@@ -64,7 +333,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="769255294021185">
+        <event-block disabled="1" sid="769255294021185">
             <conditions>
                 <condition id="6" name="On object clicked" sid="232528407134918" type="Mouse">
                     <param id="0" name="Mouse button">0</param>
@@ -86,7 +355,7 @@
                 <action id="-16" name="Set opacity" sid="777046675693546" type="Sprite4">
                     <param id="0" name="Opacity">100</param>
                 </action>
-                <action id="-16" name="Set opacity" sid="841874272661336" type="Sprite9">
+                <action id="-16" name="Set opacity" sid="841874272661336" type="Golduck2">
                     <param id="0" name="Opacity">100</param>
                 </action>
                 <action id="-16" name="Set opacity" sid="909788718048203" type="Sprite8">
@@ -94,7 +363,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="467074202696672">
+        <event-block disabled="1" sid="467074202696672">
             <conditions>
                 <condition id="6" name="On object clicked" sid="215585180547196" type="Mouse">
                     <param id="0" name="Mouse button">0</param>
@@ -116,7 +385,7 @@
                 <action id="-16" name="Set opacity" sid="857091681815301" type="Viray2">
                     <param id="0" name="Opacity">100</param>
                 </action>
-                <action id="-16" name="Set opacity" sid="993302025893842" type="Sprite9">
+                <action id="-16" name="Set opacity" sid="993302025893842" type="Golduck2">
                     <param id="0" name="Opacity">100</param>
                 </action>
                 <action id="-16" name="Set opacity" sid="849301474746542" type="Sprite4">
@@ -124,12 +393,12 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="234204682536236">
+        <event-block disabled="1" sid="234204682536236">
             <conditions>
                 <condition id="6" name="On object clicked" sid="870014564712313" type="Mouse">
                     <param id="0" name="Mouse button">0</param>
                     <param id="1" name="Click type">0</param>
-                    <param id="2" name="Object clicked">Sprite9</param>
+                    <param id="2" name="Object clicked">Golduck2</param>
                 </condition>
             </conditions>
             <actions>
@@ -137,7 +406,7 @@
                     <param id="0" name="Variable">Character</param>
                     <param id="1" name="Value">5</param>
                 </action>
-                <action id="-16" name="Set opacity" sid="816746886472560" type="Sprite9">
+                <action id="-16" name="Set opacity" sid="816746886472560" type="Golduck2">
                     <param id="0" name="Opacity">60</param>
                 </action>
                 <action id="-16" name="Set opacity" sid="264176986031862" type="Cat2">
@@ -154,14 +423,8 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="223962995500193">
-            <conditions>
-                <condition id="6" name="On object clicked" sid="254033262985363" type="Mouse">
-                    <param id="0" name="Mouse button">0</param>
-                    <param id="1" name="Click type">0</param>
-                    <param id="2" name="Object clicked">Play</param>
-                </condition>
-            </conditions>
+        <event-block disabled="1" sid="223962995500193">
+            <conditions />
             <actions>
                 <action id="-2" name="Go to layout" sid="346733664753919" type="System">
                     <param id="0" name="Layout">Game</param>

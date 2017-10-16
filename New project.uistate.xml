@@ -10,16 +10,19 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">Selection</layout>
+        <layout active="1" order="3">Selection</layout>
         <layout order="1">Game</layout>
-        <layout active="1" order="2">Title</layout>
-        <event-sheet order="3">Character Selection</event-sheet>
-        <event-sheet order="4">Title</event-sheet>
+        <layout order="2">Login</layout>
+        <layout order="0">Title</layout>
+        <event-sheet order="4">Character Selection</event-sheet>
+        <event-sheet order="5">Title</event-sheet>
+        <event-sheet order="6">Game</event-sheet>
+        <event-sheet order="7">Sheet_Login</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
         <property expanded="1" name="Project settings" />
-        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
     <families-expanded root="1" />
@@ -50,7 +53,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Sprite11/" />
         <folder expanded="1" path="animation-folder/Sprite12/" />
         <folder expanded="1" path="animation-folder/Sprite13/" />
-        <folder expanded="1" path="animation-folder/character_pickcell/" />
+        <folder expanded="1" path="animation-folder/character_select/" />
         <folder expanded="1" path="animation-folder/character_options/" />
         <folder expanded="1" path="animation-folder/TitleBackground/" />
         <folder expanded="1" path="animation-folder/optionStart/" />

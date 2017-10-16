@@ -10,10 +10,14 @@
     <unique-id>1ukluvqjlbwyx</unique-id>
     <saved-with-version>24400</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Multiplayer" version="1">Multiplayer</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
@@ -26,8 +30,8 @@
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>1600</width>
-        <height>1024</height>
+        <width>1366</width>
+        <height>768</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
@@ -627,9 +631,6 @@
         <object-type name="Mouse" sid="994091997513885">
             <plugin id="Mouse" />
         </object-type>
-        <object-type name="txtPlay" sid="300208660738097">
-            <plugin id="Text" />
-        </object-type>
         <object-type name="Sprite11" sid="680969209698881">
             <plugin id="Sprite" />
             <behaviors>
@@ -767,11 +768,8 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="character_pickcell" sid="257725663776997">
+        <object-type name="character_select" sid="257725663776997">
             <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="Order" sid="876769142441193" type="number" />
-            </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="719514990357885" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -794,9 +792,6 @@
             </animation-folder>
         </object-type>
         <object-type name="txtSelectionInfo" sid="901855710032937">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="txtTimer" sid="594838145088671">
             <plugin id="Text" />
         </object-type>
         <object-type name="TitleBackground" sid="796291015455622">
@@ -866,21 +861,52 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="JoinButton" sid="380312344038375">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="Title" sid="475792129562010">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="NameTextBox" sid="779991573606656">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="FormLabel" sid="177501630214674">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Multiplayer" sid="205860132221229">
+            <plugin id="Multiplayer" />
+        </object-type>
+        <object-type name="Function" sid="440577503103672">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="HostIndicator" sid="133305167917552">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="NetStats" sid="718872360363559">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="TextBox" sid="653155155740924">
+            <plugin id="TextBox" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
         <layout>Title.xml</layout>
         <layout>Selection.xml</layout>
         <layout>Game.xml</layout>
+        <layout>Login.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Game.xml</event-sheet>
         <event-sheet>Title.xml</event-sheet>
         <event-sheet>Character Selection.xml</event-sheet>
+        <event-sheet>Sheet_Login.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="3" />
         <global-instance type="Mouse" uid="14" />
+        <global-instance type="Multiplayer" uid="27" />
+        <global-instance type="Function" uid="33" />
     </global-instances>
     <sounds-folder />
     <music-folder />
